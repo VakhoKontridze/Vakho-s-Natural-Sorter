@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8716A901251E733200EEE514 /* Numbering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8716A900251E733200EEE514 /* Numbering.swift */; };
 		876F2A65251790A900DAD3F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876F2A64251790A900DAD3F3 /* AppDelegate.swift */; };
 		876F2A67251790A900DAD3F3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876F2A66251790A900DAD3F3 /* MainView.swift */; };
 		876F2A69251790A900DAD3F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 876F2A68251790A900DAD3F3 /* Assets.xcassets */; };
@@ -15,9 +16,11 @@
 		876F2ADD2518D0DE00DAD3F3 /* WindowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876F2ADC2518D0DD00DAD3F3 /* WindowFactory.swift */; };
 		876F2AE72518D14100DAD3F3 /* MainWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876F2AE62518D14100DAD3F3 /* MainWindow.swift */; };
 		876F2AEC2518D1F600DAD3F3 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876F2AEB2518D1F600DAD3F3 /* View.swift */; };
+		876F2AF82518ED9B00DAD3F3 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876F2AF72518ED9B00DAD3F3 /* SettingsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8716A900251E733200EEE514 /* Numbering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numbering.swift; sourceTree = "<group>"; };
 		876F2A61251790A900DAD3F3 /* Vakho's Natural Sorter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vakho's Natural Sorter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		876F2A64251790A900DAD3F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		876F2A66251790A900DAD3F3 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -29,6 +32,7 @@
 		876F2ADC2518D0DD00DAD3F3 /* WindowFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowFactory.swift; sourceTree = "<group>"; };
 		876F2AE62518D14100DAD3F3 /* MainWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindow.swift; sourceTree = "<group>"; };
 		876F2AEB2518D1F600DAD3F3 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		876F2AF72518ED9B00DAD3F3 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 				876F2AD12518D01C00DAD3F3 /* App Info */,
 				876F2AD22518D02800DAD3F3 /* App Control */,
 				876F2AD42518D02E00DAD3F3 /* Windows and Views */,
+				876F2AF52518ED7800DAD3F3 /* ViewModels */,
+				876F2AF62518ED8400DAD3F3 /* Models */,
 				876F2ADB2518D0D100DAD3F3 /* Services */,
 				876F2AEA2518D1EC00DAD3F3 /* Extensions */,
 				876F2AD52518D03600DAD3F3 /* Resources */,
@@ -139,6 +145,22 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		876F2AF52518ED7800DAD3F3 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				876F2AF72518ED9B00DAD3F3 /* SettingsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		876F2AF62518ED8400DAD3F3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8716A900251E733200EEE514 /* Numbering.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -166,7 +188,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1200;
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1220;
 				TargetAttributes = {
 					876F2A60251790A900DAD3F3 = {
 						CreatedOnToolsVersion = 12.0;
@@ -209,11 +231,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				876F2A67251790A900DAD3F3 /* MainView.swift in Sources */,
+				8716A901251E733200EEE514 /* Numbering.swift in Sources */,
 				876F2A65251790A900DAD3F3 /* AppDelegate.swift in Sources */,
 				876F2AEC2518D1F600DAD3F3 /* View.swift in Sources */,
 				876F2AE72518D14100DAD3F3 /* MainWindow.swift in Sources */,
 				876F2ADD2518D0DE00DAD3F3 /* WindowFactory.swift in Sources */,
 				876F2AD82518D05500DAD3F3 /* main.swift in Sources */,
+				876F2AF82518ED9B00DAD3F3 /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +365,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Vakho's Natural Sorter/Vakho_s_Natural_Sorter.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Vakho's Natural Sorter/Preview Content\"";
@@ -352,7 +377,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vakhtang-kontridze.Vakho-s-Natural-Sorter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -365,6 +390,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Vakho's Natural Sorter/Vakho_s_Natural_Sorter.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Vakho's Natural Sorter/Preview Content\"";
@@ -376,7 +402,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vakhtang-kontridze.Vakho-s-Natural-Sorter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

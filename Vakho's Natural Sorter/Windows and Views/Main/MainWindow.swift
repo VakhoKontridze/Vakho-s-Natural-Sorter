@@ -14,16 +14,17 @@ final class MainWindow: WindowFactory, WindowFactoryable {
     
     var rootView: some View {
         MainView()
+            .environmentObject(appDelegate.settings)
     }
     
     let rect: WindowRectParameters = .init(
-        defaultSize: MainView.ViewModel.window
+        defaultSize: MainView.Layout.window
     )
     
     let titleBar: WindowFactoryTitleBarSettings = .init(
         title: AppDelegate.appName,
         isTransparent: true,
-        titleButtons: [.close]
+        titleButtons: [.close, .miniaturize, .zoom]
     )
     
     // MARK: Initialize

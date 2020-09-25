@@ -8,7 +8,9 @@
 import Cocoa
 
 // MARK: App Delegate
-/*@NSApplicationMain*/ final class AppDelegate: NSObject {}
+/*@NSApplicationMain*/ final class AppDelegate: NSObject {
+    let settings: SettngsViewModel = .init()
+}
 
 // MARK:- App Delegate
 extension AppDelegate: NSApplicationDelegate {
