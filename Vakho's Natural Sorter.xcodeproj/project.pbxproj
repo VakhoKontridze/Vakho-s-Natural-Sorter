@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8716A901251E733200EEE514 /* Numbering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8716A900251E733200EEE514 /* Numbering.swift */; };
+		8716A90A251E79E500EEE514 /* NaturalComparator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8716A909251E79E500EEE514 /* NaturalComparator.swift */; };
+		8716A90E251E810000EEE514 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8716A90D251E810000EEE514 /* String.swift */; };
 		876F2A65251790A900DAD3F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876F2A64251790A900DAD3F3 /* AppDelegate.swift */; };
 		876F2A67251790A900DAD3F3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876F2A66251790A900DAD3F3 /* MainView.swift */; };
 		876F2A69251790A900DAD3F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 876F2A68251790A900DAD3F3 /* Assets.xcassets */; };
@@ -21,6 +23,8 @@
 
 /* Begin PBXFileReference section */
 		8716A900251E733200EEE514 /* Numbering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numbering.swift; sourceTree = "<group>"; };
+		8716A909251E79E500EEE514 /* NaturalComparator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaturalComparator.swift; sourceTree = "<group>"; };
+		8716A90D251E810000EEE514 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		876F2A61251790A900DAD3F3 /* Vakho's Natural Sorter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vakho's Natural Sorter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		876F2A64251790A900DAD3F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		876F2A66251790A900DAD3F3 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -124,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				876F2ADC2518D0DD00DAD3F3 /* WindowFactory.swift */,
+				8716A909251E79E500EEE514 /* NaturalComparator.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -140,6 +145,7 @@
 		876F2AEA2518D1EC00DAD3F3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				8716A90D251E810000EEE514 /* String.swift */,
 				876F2AEB2518D1F600DAD3F3 /* View.swift */,
 			);
 			path = Extensions;
@@ -232,7 +238,9 @@
 			files = (
 				876F2A67251790A900DAD3F3 /* MainView.swift in Sources */,
 				8716A901251E733200EEE514 /* Numbering.swift in Sources */,
+				8716A90E251E810000EEE514 /* String.swift in Sources */,
 				876F2A65251790A900DAD3F3 /* AppDelegate.swift in Sources */,
+				8716A90A251E79E500EEE514 /* NaturalComparator.swift in Sources */,
 				876F2AEC2518D1F600DAD3F3 /* View.swift in Sources */,
 				876F2AE72518D14100DAD3F3 /* MainWindow.swift in Sources */,
 				876F2ADD2518D0DE00DAD3F3 /* WindowFactory.swift in Sources */,

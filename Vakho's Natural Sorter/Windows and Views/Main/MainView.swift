@@ -71,7 +71,7 @@ extension MainView {
             Spacer()
             
             Button("Sort", action: {
-                print("SORT")
+                text = NaturalComparator.sort(text)
             })
             
             Spacer()
