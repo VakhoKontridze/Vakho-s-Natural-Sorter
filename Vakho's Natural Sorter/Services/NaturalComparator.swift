@@ -10,7 +10,7 @@ import Cocoa
 // MARK:- Extensions
 extension String {
     static func naturalSortOrder(lhs: String, rhs: String) -> Bool {
-        NaturalComparator.comapre(lhs: lhs, rhs: rhs)
+        NaturalComparator.compare(lhs: lhs, rhs: rhs)
     }
 }
 
@@ -21,17 +21,33 @@ final class NaturalComparator {
 
 // MARK:- Sort
 extension NaturalComparator {
-    static func sort(_ text: String) -> String {
-        text
-            .components(separatedBy: .newlines)
-            .sorted(by: String.naturalSortOrder)
-            .joined(separator: "\n")
+    static func sort(_ text: String, settings: SettingsViewModel.NaturalComparisonSettings) -> String {
+        var lines: [String] = text.components(separatedBy: .newlines)
+        
+        if settings.removeDuplicates {
+            lines.removingDuplicates()
+        }
+        
+        if settings.fixSpacing {
+            lines = lines.map {
+                $0
+                    .components(separatedBy: .whitespaces)
+                    .filter { !$0.isEmpty }
+                    .joined(separator: " ")
+            }
+        }
+        
+        lines.sort(by: String.naturalSortOrder)
+        
+        // TODO: Numbering
+        
+        return lines.joined(separator: "\n")
     }
 }
 
 // MARK:- Comparison
 private extension NaturalComparator {
-    static func comapre(lhs: String, rhs: String) -> Bool {
+    static func compare(lhs: String, rhs: String) -> Bool {
         let (lhs, rhs): ([String], [String]) = {
             var (lhs, rhs) = (lhs, rhs)
             ommitIdenticalCharacters(lhs: &lhs, rhs: &rhs)
@@ -160,5 +176,23 @@ private enum CharacterType: CaseIterable {
 private extension Character {
     var characterType: CharacterType {
         CharacterType.type(of: self)
+    }
+}
+
+// MARK:- Helpers
+private extension Array where Element:Equatable {
+    func removeDuplicates() -> [Element] {
+        // This algorithm is needed, because order must not be lost when convering to set and then to array
+        var result: [Element] = []
+
+        for element in self {
+            if !result.contains(element) { result.append(element) }
+        }
+
+        return result
+    }
+    
+    mutating func removingDuplicates() {
+        self = self.removeDuplicates()
     }
 }

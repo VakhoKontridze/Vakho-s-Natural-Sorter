@@ -9,7 +9,7 @@ import Cocoa
 
 // MARK: App Delegate
 /*@NSApplicationMain*/ final class AppDelegate: NSObject {
-    let settings: SettngsViewModel = .init()
+    let settings: SettingsViewModel = .init()
 }
 
 // MARK:- App Delegate

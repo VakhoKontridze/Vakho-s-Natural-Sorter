@@ -9,7 +9,7 @@ import SwiftUI
 
 // MARK:- Main View
 struct MainView: View {
-    @EnvironmentObject private var settings: SettngsViewModel
+    @EnvironmentObject private var settings: SettingsViewModel
     
     @State private var text: String = ""
     private var numberOfLines: Int { text.components(separatedBy: .newlines).count }
@@ -71,7 +71,7 @@ extension MainView {
             Spacer()
             
             Button("Sort", action: {
-                text = NaturalComparator.sort(text)
+                text = NaturalComparator.sort(text, settings: settings.asNaturalComparisonSettings)
             })
             
             Spacer()
