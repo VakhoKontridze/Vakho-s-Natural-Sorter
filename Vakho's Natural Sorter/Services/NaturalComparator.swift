@@ -24,28 +24,30 @@ extension NaturalComparator {
     static func sort(_ text: String, settings: SettingsViewModel.NaturalComparisonSettings) -> String {
         var lines: [String] = text.components(separatedBy: .newlines)
         
-        if settings.removeDuplicates {
-            lines.removingDuplicates()
-        }
-        
-        if settings.fixSpacing {
-            lines = lines.map {
-                $0
-                    .components(separatedBy: .whitespaces)
-                    .filter { !$0.isEmpty }
-                    .joined(separator: " ")
-            }
-        }
-        
+        if settings.removeDuplicates { lines.removingDuplicates() }
+        lines = fixSpacing(lines, fixSpacing: settings.fixSpacing)
         lines.sort(by: String.naturalSortOrder)
-        
-        // TODO: Numbering
+        lines = Numerator.enumerate(lines, numbering: settings.numbering)
         
         return lines.joined(separator: "\n")
     }
 }
 
-// MARK:- Comparison
+// MARK:- Spacing
+private extension NaturalComparator {
+    static func fixSpacing(_ lines: [String], fixSpacing: Bool) -> [String] {
+        guard fixSpacing else { return lines }
+        
+        return lines.map {
+            $0
+                .components(separatedBy: .whitespaces)
+                .filter { !$0.isEmpty }
+                .joined(separator: " ")
+        }
+    }
+}
+
+// MARK:- Sort Order
 private extension NaturalComparator {
     static func compare(lhs: String, rhs: String) -> Bool {
         let (lhs, rhs): ([String], [String]) = {
@@ -97,10 +99,7 @@ private extension NaturalComparator {
         
         return lhs.count < rhs.count
     }
-}
 
-// MARK:- Optimization
-private extension NaturalComparator {
     static func ommitIdenticalCharacters(lhs: inout String, rhs: inout String) {
         // This algorithm also allows for furhter tokenization of string, when lhs and rhs contain similar sequences:
         // NeedsASort X-> ["NeedsASort"]           -> ["A"]
@@ -123,7 +122,6 @@ private extension NaturalComparator {
     }
 }
 
-// MARK:- Tokens
 private extension String {
     var tokens: [String] {
         guard count >= 1 else { return [] }

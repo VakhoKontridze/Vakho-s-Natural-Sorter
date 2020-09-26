@@ -89,7 +89,7 @@ extension MainView {
         static let window: CGSize = .init(width: view.ideal.width, height: view.ideal.height + titleBar.height)
         static let titleBar: CGSize = .init(width: -1, height: 22)
         
-        static let picker: CGSize = .init(width: 150, height: -1)
+        static let picker: CGSize = .init(width: 300, height: -1)
         static let separator: CGSize = .init(width: 50, height: -1)
         
         static let footerCornerItem: CGSize = .init(width: 100, height: -1)
