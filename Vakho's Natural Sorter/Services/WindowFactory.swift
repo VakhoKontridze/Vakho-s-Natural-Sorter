@@ -69,6 +69,7 @@ extension WindowFactory {
     func saveFrame(_ notification: Notification) {
         guard notification.object as? NSWindow == window else { return }
 
+        if window.styleMask.contains(.fullScreen) { window.toggleFullScreen(nil) }
         rect.saveFrame(window.frame)
 
         window = nil
