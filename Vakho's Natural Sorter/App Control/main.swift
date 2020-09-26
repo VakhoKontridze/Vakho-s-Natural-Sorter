@@ -9,7 +9,7 @@ import Cocoa
 let appDelegate: AppDelegate = .init()
 NSApplication.shared.delegate = appDelegate
 
-private let menuBar: NSMenu = AppMenu(settings: appDelegate.settings)
-NSApplication.shared.mainMenu = menuBar
+private let appMenu: NSMenu = AppMenu(settings: appDelegate.settings)
+NSApplication.shared.mainMenu = appMenu
 
 _ = NSApplicationMain(CommandLine.argc, CommandLine.unsafeArgv)
