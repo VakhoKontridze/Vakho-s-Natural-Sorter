@@ -1,7 +1,3 @@
-
-# Created by https://www.toptal.com/developers/gitignore/api/macos,swiftpm,xcode
-# Edit at https://www.toptal.com/developers/gitignore?templates=macos,swiftpm,xcode
-
 ### macOS ###
 # General
 .DS_Store
@@ -35,8 +31,6 @@ Packages
 .build/
 xcuserdata
 DerivedData/
-*.xcodeproj
-
 
 ### Xcode ###
 # Xcode
@@ -71,5 +65,3 @@ build/
 !*.xcodeproj/xcshareddata/
 !*.xcworkspace/contents.xcworkspacedata
 **/xcshareddata/WorkspaceSettings.xcsettings
-
-# End of https://www.toptal.com/developers/gitignore/api/macos,swiftpm,xcode
