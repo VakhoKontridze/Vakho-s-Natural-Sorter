@@ -1,6 +1,6 @@
 # Vakho's Natural Sorter
 
-## Table of contents
+## Table of Contents
 - [Description](#description)
 - [Technologies](#technologies)
 - [Setup](#setup)
