@@ -23,4 +23,4 @@ You can simply clone the project and build the app from XCode.
 ![Main](./img/Main.jpg)
 
 ## Contact
-e-mail: [vakho.kontridze@gmail.com](mailto:vakho.kontridze@gmail.com)
+e-mail: vakho.kontridze@gmail.com
